@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2f363e;
+}
+
+.clock-1 {
+  position: relative;
+  height: 450px;
+  width: 450px;
+  background-color: #2f363e;
+  border-radius: 50%;
+  box-shadow:
+    10px 50px 70px rgba(0, 0, 0, 0.25),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.clock-1::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #2f363e;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.clock-1 .hour {
+  position: absolute;
+  inset: 10px;
+  color: #fff;
+  text-align: center;
+  transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock-1 .hour b {
+  font-size: 2em;
+  opacity: .25;
+  display: inline-block;
+  transform: rotate(calc(-30deg * var(--i)));
+}
+
+.clock-1 .sec {
+  position: absolute;
+  font-size: 5px;
+  inset: 68px;
+  color: #fff;
+  text-align: center;
+  transform: rotate(calc(6deg * var(--s)));
+}
+
+.circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 10;
+}
+
+.circle i {
+  position: absolute;
+  width: 12px;
+  height: 50%;
+  background: var(--color);
+  opacity: .75;
+  transform-origin: bottom;
+  transform: scale(.6);
+}
+
+.circle:nth-child(1) i {
+  width: 2px;
+}
+
+.circle:nth-child(2) i {
+  width: 6px;
+}
+
+.circle2 {
+  width: 240px;
+  height: 240px;
+  z-index: 9;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.circle3 {
+  width: 180px;
+  height: 180px;
+  z-index: 8;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: -9px;
+  border-radius: 50%;
+  background: var(--color);
+  box-shadow: 0 0 20px var(--color), 0 0 60px var(--color);
+}

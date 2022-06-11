@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock 1</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body onload="generateSecondIcon()">
+    <div class="clock-1">
+      <div class="circle" style="--color: #04fc43" id="sc"><i></i></div>
+      <div class="circle circle2" style="--color: #fee800" id="mn">
+        <i></i>
+      </div>
+      <div class="circle circle3" style="--color: #ff2972" id="hr">
+        <i></i>
+      </div>
+      <div id="analogHours"></div>
+      <div id="secondsSymbols"></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
